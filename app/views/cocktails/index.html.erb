@@ -1,9 +1,22 @@
-<h1>List of cocktails</h1>
+<div class=" border-bottom py-1 bg-dark">
+  <div class="d-flex justify-content-between align-items-center mx-2">
+    <h3><%= cl_image_tag("big_ass_sticker_lh9ks3.png", width: 70, height: 70, crop: :fill) %>Cocktéléphant</h3>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-warning mx-3" %>
+  </div>
+</div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="container mt-3">
+  <h1>Ne vous trompez pas de cocktail 🐘</h1>
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+  <div class="cards mt-5">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-cocktail p-3 m-3" style="width: 18rem;">
+        <%= cl_image_tag cocktail.photo.key, height: 200, width: 250, crop: :fill %>
+        <div class="card-body">
+          <h4 class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail, class: "btn-text") %></h4>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

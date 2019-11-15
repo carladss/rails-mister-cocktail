@@ -1,6 +1,9 @@
-<h1>Add a new cocktail</h1>
+<div class="container mt-3">
+  <h1>Add a new cocktéléphant 🐘</h1>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
-<% end %>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+  <% end %>
+</div>
