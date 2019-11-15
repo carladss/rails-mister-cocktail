@@ -14,7 +14,8 @@
         <% if cocktail.photo.attached? %>
           <%= cl_image_tag cocktail.photo.key, height: 200, width: 250, crop: :fill %>
         <% else %>
-          <%= image_tag "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marmiton.org%2Frecettes%2Frecette_blue-lagoon_371678.aspx&psig=AOvVaw0L5oNduzjyh6ze4VarzC1H&ust=1573923735935000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiSmIDZ7OUCFQAAAAAdAAAAABAD", alt: "alttext" %>
+          <%= image_tag "https://assets.afcdn.com/recipe/20190222/88136_w1024h768c1cx2736cy1824cxt0cyt0cxb5466cyb3641.jpg", alt: "alttext", height: 200, width: 250 %>
+        <% end %>
         <div class="card-body">
           <h4 class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail, class: "btn-text") %></h4>
         </div>
